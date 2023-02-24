@@ -1,0 +1,42 @@
+@import url("/src/utils/color.css");
+
+.custom-switch label {
+  width: 60px;
+  height: 30px;
+  background-color: #eaeaea;
+  cursor: pointer;
+  border-radius: 100px;
+  position: relative;
+}
+
+.custom-switch input {
+  display: none;
+}
+
+.custom-switch label .icon-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  background-color: white;
+  padding: 4px;
+  height: fit-content;
+  border-radius: 100px;
+  color: #333;
+  transition: 0.4s;
+}
+
+.dark .custom-switch label {
+  background-color: var(--primary);
+}
+
+.dark .custom-switch label .icon-wrapper {
+  left: 54%;
+}
+
+/* switcher small */
+.switcher-small {
+  position: absolute;
+  left: 5%;
+  bottom: 20%;
+}
