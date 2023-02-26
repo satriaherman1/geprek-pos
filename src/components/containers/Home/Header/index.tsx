@@ -5,7 +5,7 @@ export default function Header() {
   const [mediumDevices] = useMediaQuery(mediumBreakpoints);
   return (
     <Box as="header">
-      <Container maxW={containerMaxWidth} display="flex" marginY={mediumDevices ? "10vh" : "5vh"} justifyContent="space-between" flexDir={mediumDevices ? "row" : "column-reverse"}>
+      <Container maxW={containerMaxWidth} display="flex" marginY={mediumDevices ? "10vh" : "5vh"} justifyContent="space-between" flexDir={mediumDevices ? "row" : "column-reverse"} rowGap="40px">
         <Box display="flex" alignItems="center" flexBasis={mediumDevices ? "48%" : "100%"}>
           <Box>
             <Heading size="2xl">Temukan Modal Usaha untuk Bisnis UMKM Anda</Heading>

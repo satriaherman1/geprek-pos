@@ -12,8 +12,8 @@ import "./styles.css";
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper";
 import ReviewCard from "@src/components/fragments/ReviewCard";
-import { Box, Container, Heading, Text } from "@chakra-ui/react";
-import { containerMaxWidth } from "@src/definitions/variables";
+import { Box, Container, Heading, Text, useMediaQuery } from "@chakra-ui/react";
+import { containerMaxWidth, mediumBreakpoints } from "@src/definitions/variables";
 
 export default function Review() {
   const reviews = [
@@ -36,15 +36,20 @@ export default function Review() {
       photoUrl: "https://res.cloudinary.com/dbg3ckwtz/image/upload/v1677403240/investment-competition/person/person2_ye3nyr.jpg",
     },
   ];
+
+  const [mediumScreen] = useMediaQuery(mediumBreakpoints);
   return (
     <Box marginTop="10vh">
       <Container maxW={containerMaxWidth}>
         <Heading>Review Pengguna</Heading>
         <Text>Testimoni dari pengguna investKU</Text>
+      </Container>
+
+      <Box marginX={mediumScreen ? "unset" : "20px"}>
         <Swiper
           effect={"coverflow"}
-          grabCursor={true}
-          centeredSlides={true}
+          grabCursor
+          centeredSlides
           slidesPerView={"auto"}
           loop={true}
           coverflowEffect={{
@@ -64,7 +69,7 @@ export default function Review() {
             </SwiperSlide>
           ))}
         </Swiper>
-      </Container>
+      </Box>
     </Box>
   );
 }

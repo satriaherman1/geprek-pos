@@ -1,14 +1,18 @@
-import { Box, Button, Container, Flex, Heading, Image, List, Text, useMediaQuery } from "@chakra-ui/react";
+import { Box, Button, Container, Flex, Heading, Image, List, ListItem, Text, useColorModeValue, useMediaQuery, Icon } from "@chakra-ui/react";
 import { containerMaxWidth, largeBreakpoints, mediumBreakpoints } from "@src/definitions/variables";
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   const [mediumScreen] = useMediaQuery(mediumBreakpoints);
   const [largeScreen] = useMediaQuery(largeBreakpoints);
+
+  const footerBg = useColorModeValue("gray.800", "#202633");
+  const joinUsBg = useColorModeValue("#202633", "#191e29");
   return (
-    <Box as="footer">
+    <Box as="footer" paddingTop="80px" bg={footerBg} color="white">
       <Container maxW={containerMaxWidth}>
-        <Flex justifyContent="space-between">
-          <Box>
+        <Flex justifyContent="space-between" flexDir={mediumScreen ? "row" : "column"}>
+          <Box flexBasis={largeScreen ? "37%" : mediumScreen ? "100%" : "100%"}>
             <Image src="src/images/logo-wide.svg" width="120px" />
             <Text>Satukan Budaya Bangsa</Text>
 
@@ -21,62 +25,74 @@ export default function Footer() {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </Box>
-          <Box flexBasis={mediumScreen ? "100%" : largeScreen ? "60%" : "100%"} flexDir={largeScreen ? "column" : "column-reverse"}>
-            <Flex flexDir={mediumScreen ? "row" : "column"}>
+          <Flex flexBasis={largeScreen ? "60%" : mediumScreen ? "100%" : "100%"} flexDir={largeScreen ? "column" : "column-reverse"} rowGap="25px">
+            <Flex justifyContent="space-between" flexDir={mediumScreen ? "row" : "column"}>
               <Box as="section">
                 <Heading as="h4" size="md">
                   Tentang Kami
                 </Heading>
-                <List>
-                  <li>
+                <List display="flex" flexDir="column" rowGap="10px" marginTop="20px">
+                  <ListItem>
                     <a href="">Kebijakan dan Privasi</a>
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <a href="">Kisah Sukses</a>
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <a href="">Syarat dan Ketentuan</a>
-                  </li>
+                  </ListItem>
                 </List>
               </Box>
               <Box as="section">
                 <Heading as="h4" size="md">
                   Tentang Kami
                 </Heading>
-                <List>
-                  <li>
+                <List display="flex" flexDir="column" rowGap="10px" marginTop="20px">
+                  <ListItem>
                     <a href="">curture@gmail.com</a>
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <a href="">+6277634589</a>
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <a href="">Syarat dan Ketentuan</a>
-                  </li>
+                  </ListItem>
                 </List>
               </Box>
               <Box as="section">
                 <Heading as="h4" size="md">
                   Tentang Kami
                 </Heading>
-                <List>
-                  <Button>hi</Button>
+                <List display="flex" gap="8px" marginTop="20px">
+                  <Button colorScheme="facebook" size="sm">
+                    <Icon as={FaFacebookF} />
+                  </Button>
+                  <Button colorScheme="pink" size="sm">
+                    <Icon as={FaInstagram} />
+                  </Button>
+                  <Button colorScheme="whatsapp" size="sm">
+                    <Icon as={FaWhatsapp} />
+                  </Button>
                 </List>
               </Box>
             </Flex>
 
-            <Flex flexDir={largeScreen ? "row" : "column"} justifyContent="space-between" rowGap="10px" rounded="md" mt="20px">
-              <section>
-                <Heading color="white">Gabung Sekarang!</Heading>
+            <Flex padding="20px 29px" borderRadius="10px" bg={joinUsBg} flexDir={largeScreen ? "row" : "column"} justifyContent="space-between" rowGap="10px" rounded="md" mt="20px">
+              <Box as="section">
+                <Heading color="white" size="md">
+                  Gabung Sekarang!
+                </Heading>
                 <Text>Mari bergabung dengan kami</Text>
-              </section>
+              </Box>
               <Button colorScheme="blue">Gabung Sekarang!</Button>
             </Flex>
-          </Box>
+          </Flex>
         </Flex>
       </Container>
 
-      <Box paddingY="20px">&copy; Muhammad Satria Herman 2023</Box>
+      <Box paddingY="20px" textAlign="center" bg="#283140" marginTop="40px">
+        &copy; Muhammad Satria Herman 2023
+      </Box>
     </Box>
   );
 }

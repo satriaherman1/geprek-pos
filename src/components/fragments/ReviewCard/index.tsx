@@ -2,7 +2,6 @@ import { Box, Flex, Heading, Image, SkeletonCircle, Text, useColorModeValue } fr
 
 interface IReviewCard {
   name: string;
-
   title: string;
   description: string;
   photo: string;
@@ -13,7 +12,7 @@ export default function ReviewCard({ name, title, description, photo }: IReviewC
   const boxShadow = "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(39, 39, 39, 0.15) 0px 4px 20px 0px";
 
   return (
-    <Box padding="20px 25px" rounded="lg" bg={bg} boxShadow={boxShadow}>
+    <Box padding="20px 25px" marginTop="40px" rounded="lg" bg={bg} boxShadow={boxShadow}>
       <Flex padding="8px 12px" columnGap={3}>
         <Image loading="lazy" fallback={<SkeletonCircle width="50px" height="50px" />} src={photo} width="50px" height="50px" rounded="full" display="block" />
         <Box>
