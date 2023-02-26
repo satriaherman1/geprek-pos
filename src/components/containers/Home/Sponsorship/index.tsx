@@ -8,7 +8,7 @@ export default function Sponsorship() {
     "https://res.cloudinary.com/dbg3ckwtz/image/upload/v1677386768/investment-competition/sponsorship/google_fpgcsz.svg",
   ];
 
-  const bg = useColorModeValue("#fafafa", "gray.700");
+  const bg = useColorModeValue("#fafafa", "blackAlpha.200");
 
   return (
     <Box background={bg} paddingY="30px">

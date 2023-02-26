@@ -13,14 +13,10 @@ export default function Switch() {
     background: active ? "blue.300" : "#eaeaea",
   };
 
-  const handleSwitch = (e: any) => {
-    const {
-      target: { checked },
-    } = e;
-
+  const handleSwitch = () => {
     toggleColorMode();
 
-    if (checked) {
+    if (colorMode == "light") {
       setActive(true);
     } else {
       setActive(false);
