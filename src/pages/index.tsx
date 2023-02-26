@@ -1,3 +1,5 @@
+import Footer from "@src/components/common/Footer";
+import Desc1 from "@src/components/containers/Home/Desc1";
 import Header from "@src/components/containers/Home/Header";
 import Review from "@src/components/containers/Home/Review";
 import Sponsorship from "@src/components/containers/Home/Sponsorship";
@@ -11,7 +13,10 @@ export default function Home() {
       <Header />
       <Sponsorship />
       <Timeline />
+      <Desc1 />
       <Review />
+
+      <Footer />
     </>
   );
 }

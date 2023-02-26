@@ -13,6 +13,7 @@ import "./styles.css";
 import { EffectCoverflow, Pagination } from "swiper";
 import ReviewCard from "@src/components/fragments/ReviewCard";
 import { Box, Container, Heading, Text } from "@chakra-ui/react";
+import { containerMaxWidth } from "@src/definitions/variables";
 
 export default function Review() {
   const reviews = [
@@ -37,7 +38,7 @@ export default function Review() {
   ];
   return (
     <Box marginTop="10vh">
-      <Container maxW="1200px">
+      <Container maxW={containerMaxWidth}>
         <Heading>Review Pengguna</Heading>
         <Text>Testimoni dari pengguna investKU</Text>
         <Swiper

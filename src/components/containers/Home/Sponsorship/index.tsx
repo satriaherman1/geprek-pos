@@ -1,4 +1,5 @@
 import { Box, Container, Image, useColorModeValue } from "@chakra-ui/react";
+import { containerMaxWidth } from "@src/definitions/variables";
 import Marquee from "react-fast-marquee";
 
 export default function Sponsorship() {
@@ -12,7 +13,7 @@ export default function Sponsorship() {
 
   return (
     <Box background={bg} paddingY="30px">
-      <Container maxW="1200px">
+      <Container maxW={containerMaxWidth}>
         <Marquee gradient={false} speed={60}>
           {sponsorshipUrl.map((url) => (
             <Image marginX="20px" key={url} src={url} width="200px" alt="" />
