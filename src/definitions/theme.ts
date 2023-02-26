@@ -1,5 +1,10 @@
 import { extendTheme } from "@chakra-ui/react";
 
+const colorConfig = {
+  initialColorMode: "dark",
+  useSystemColorMode: false,
+};
+
 // 2. Call `extendTheme` and pass your custom values
 const theme = extendTheme({
   colors: {
@@ -12,6 +17,7 @@ const theme = extendTheme({
     box: `'Poppins', sans-serif`,
     text: `'Poppins', sans-serif`,
   },
+  ...colorConfig,
 });
 
 export { theme };

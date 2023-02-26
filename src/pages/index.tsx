@@ -1,4 +1,6 @@
 import Header from "@src/components/containers/Home/Header";
+import Sponsorship from "@src/components/containers/Home/Sponsorship";
+import Timeline from "@src/components/containers/Home/Timeline";
 import Navbar from "@src/components/fragments/Navbar";
 
 export default function Home() {
@@ -6,6 +8,8 @@ export default function Home() {
     <>
       <Navbar />
       <Header />
+      <Sponsorship />
+      <Timeline />
     </>
   );
 }
