@@ -32,7 +32,7 @@ export default function Navbar() {
   ];
 
   return (
-    <Box as="nav" paddingY="20px" fontWeight={500}>
+    <Box as="nav" paddingY="20px" fontWeight={500} className="navbar">
       <Container maxW={containerMaxWidth} display="flex" alignItems="center" justifyContent="space-between">
         <Heading as="h4" size="md">
           Invest
@@ -53,39 +53,41 @@ export default function Navbar() {
           <Switch />
         </Box>
 
-        <Box as="button" display={mediumScreen ? "none" : "flex"} flexDir="column" gap="7px" onClick={() => setOpenNav(true)}>
+        <Box as="button" className="nav-button" display={mediumScreen ? "none" : "flex"} flexDir="column" gap="7px" onClick={() => setOpenNav(true)}>
           <Box as="span" display="block" width="33px" borderRadius="30px" height="3px" bgColor={hamburgerBg} />
           <Box as="span" display="block" marginLeft="auto" width="26px" borderRadius="30px" height="3px" bgColor={hamburgerBg} />
           <Box as="span" display="block" width="33px" borderRadius="30px" height="3px" bgColor={hamburgerBg} />
         </Box>
       </Container>
 
-      <Box bg={navSmallBg} pos="fixed" top={0} left={openNav ? 0 : "-100vw"} h="100vh" w="100vw" transition="0.3s" zIndex={999}>
-        <Flex justifyContent="space-between">
-          <Heading as="h4" size="md" margin="20px">
-            Invest
-            <Box as="span" color="primary.500">
-              KU
+      {!mediumScreen && (
+        <Box bg={navSmallBg} pos="fixed" top={0} left={openNav ? 0 : "-100vw"} h="100vh" w="100vw" transition="0.3s" zIndex={999}>
+          <Flex justifyContent="space-between">
+            <Heading as="h4" size="md" margin="20px">
+              Invest
+              <Box as="span" color="primary.500">
+                KU
+              </Box>
+            </Heading>
+
+            <Box as="button" marginRight="22px" onClick={() => setOpenNav(false)}>
+              <CloseIcon />
             </Box>
-          </Heading>
+          </Flex>
+          <Divider />
+          <List display="flex" flexDir="column" marginTop="20px">
+            {navigationList.map((nav) => (
+              <ListItem key={nav.url} padding="25px 22px">
+                <Link to={nav.url}>{nav.name}</Link>
+              </ListItem>
+            ))}
+          </List>
 
-          <Box as="button" marginRight="22px" onClick={() => setOpenNav(false)}>
-            <CloseIcon />
+          <Box position="absolute" left="22px" bottom="10vh">
+            <Switch />
           </Box>
-        </Flex>
-        <Divider />
-        <List display="flex" flexDir="column" marginTop="20px">
-          {navigationList.map((nav) => (
-            <ListItem key={nav.url} padding="25px 22px">
-              <Link to={nav.url}>{nav.name}</Link>
-            </ListItem>
-          ))}
-        </List>
-
-        <Box position="absolute" left="22px" bottom="10vh">
-          <Switch />
         </Box>
-      </Box>
+      )}
     </Box>
   );
 }

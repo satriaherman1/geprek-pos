@@ -48,7 +48,7 @@ export default function UmkmList() {
   const [mediumScreen] = useMediaQuery(mediumBreakpoints);
 
   return (
-    <Box paddingY={mediumScreen ? "8vh" : "4vh"} bgColor={bgColor}>
+    <Box paddingY={mediumScreen ? "8vh" : "4vh"} bgColor={bgColor} className="umkm-list">
       <Container maxW={containerMaxWidth}>
         <Heading as="h1" size="xl">
           Daftar UMKM Kami

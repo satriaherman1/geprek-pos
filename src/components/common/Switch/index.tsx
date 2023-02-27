@@ -22,7 +22,7 @@ export default function Switch() {
   }, [colorMode]);
 
   return (
-    <Box display={smallDevice ? "flex" : "none"} className={`custom-control custom-switch `}>
+    <Box display={smallDevice ? "flex" : "none"} className={`custom-control custom-switch dark-switch`}>
       <Box as="input" onChange={toggleColorMode} type="checkbox" className="custom-control-input" id="dark-mode-switch" />
       <Box {...activeLabelProps} as="label" className="custom-control-label" htmlFor="dark-mode-switch">
         <Box as="span" className="icon-wrapper" left={active ? "50%" : "10%"}>

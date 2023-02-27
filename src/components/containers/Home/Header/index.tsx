@@ -18,7 +18,7 @@ export default function Header() {
             <Text marginTop="25px" textTransform="capitalize">
               kini mencari modal usaha semudah membuka ponsel hp anda Bersama InvestKU. Cukup dengan mengisikan data UMKM anda dan tunggu verifikasi dari sistem kami untuk mendapatkan dana!
             </Text>
-            <Button marginTop="25px" size="lg" variant="solid" colorScheme="blue">
+            <Button className="start-now" marginTop="25px" size="lg" variant="solid" colorScheme="blue">
               Daftar Sekarang!
             </Button>
 

@@ -23,7 +23,7 @@ export default function UmkmCard({ name, imageUrl, description }: IumkmCard) {
         <Stack mt="6" spacing="3">
           <Heading size="md">{name}</Heading>
           <Text>Telah terkumpul Rp 40.000.00</Text>
-          <Progress value={20} size="xs" colorScheme="pink" />
+          <Progress value={20} size="xs" colorScheme="green" />
         </Stack>
 
         <Flex justifyContent="space-between" marginTop="20px">
