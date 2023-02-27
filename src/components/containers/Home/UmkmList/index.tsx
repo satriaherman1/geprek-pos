@@ -1,6 +1,6 @@
-import { Box, Container, Heading, useColorModeValue } from "@chakra-ui/react";
+import { Box, Container, Heading, Text, useColorModeValue, useMediaQuery } from "@chakra-ui/react";
 import UmkmCard from "@src/components/fragments/UmkmCard";
-import { containerMaxWidth } from "@src/definitions/variables";
+import { containerMaxWidth, mediumBreakpoints } from "@src/definitions/variables";
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -45,13 +45,15 @@ export default function UmkmList() {
     },
   ];
 
+  const [mediumScreen] = useMediaQuery(mediumBreakpoints);
+
   return (
-    <Box paddingY="10vh" bgColor={bgColor}>
+    <Box paddingY={mediumScreen ? "8vh" : "4vh"} bgColor={bgColor}>
       <Container maxW={containerMaxWidth}>
-        <Heading as="h1" size="2xl">
+        <Heading as="h1" size="xl">
           Daftar UMKM Kami
         </Heading>
-
+        <Text mt={2}>Daftar UMKM yang mendaftar</Text>
         <Swiper
           // effect={"coverflow"}
           // slidesOffsetBefore={20}

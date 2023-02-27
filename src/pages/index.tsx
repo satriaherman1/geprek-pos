@@ -1,6 +1,7 @@
 import Footer from "@src/components/common/Footer";
 import Desc1 from "@src/components/containers/Home/Desc1";
 import Desc2 from "@src/components/containers/Home/Desc2";
+import FaQ from "@src/components/containers/Home/FaQ";
 import Header from "@src/components/containers/Home/Header";
 import Review from "@src/components/containers/Home/Review";
 import Sponsorship from "@src/components/containers/Home/Sponsorship";
@@ -18,8 +19,8 @@ export default function Home() {
       {/* <Desc1 /> */}
       <Desc2 />
       <UmkmList />
-      <Review />
-
+      {/* <Review /> */}
+      <FaQ />
       <Footer />
     </>
   );

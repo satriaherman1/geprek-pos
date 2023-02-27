@@ -1,4 +1,4 @@
-import { Box, BoxProps, Button, ButtonGroup, Card, CardBody, CardFooter, Divider, Heading, Image, Stack, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, BoxProps, Button, ButtonGroup, Card, CardBody, CardFooter, Divider, Flex, Heading, Image, Progress, Stack, Text, useColorModeValue } from "@chakra-ui/react";
 import { boxShadow } from "@src/definitions/variables";
 
 interface IumkmCard {
@@ -22,8 +22,24 @@ export default function UmkmCard({ name, imageUrl, description }: IumkmCard) {
         <Box {...bgConfig} />
         <Stack mt="6" spacing="3">
           <Heading size="md">{name}</Heading>
-          <Text>{description} </Text>
+          <Text>Telah terkumpul Rp 40.000.00</Text>
+          <Progress value={20} size="xs" colorScheme="pink" />
         </Stack>
+
+        <Flex justifyContent="space-between" marginTop="20px">
+          <Box>
+            <Text fontSize="10px" fontWeight="600">
+              Harga per Lembar
+            </Text>
+            <Text>Rp. 2.000</Text>
+          </Box>
+          <Box>
+            <Text fontSize="10px" fontWeight="600">
+              Total Lembar
+            </Text>
+            <Text>Rp. 2.000</Text>
+          </Box>
+        </Flex>
       </CardBody>
       <Divider color="gray.300" />
       <CardFooter>
