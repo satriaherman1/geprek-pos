@@ -11,6 +11,9 @@ const theme = extendTheme({
     primary: {
       500: "#0C6A93",
     },
+    dark: {
+      600: "#212938",
+    },
   },
   fonts: {
     heading: `'Montserrat', sans-serif`,

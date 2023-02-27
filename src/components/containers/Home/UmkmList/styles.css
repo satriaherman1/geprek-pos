@@ -1,0 +1,23 @@
+.swiper {
+  width: 100%;
+  margin-top: 50px;
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
+}
+
+.umkm-swiper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+
+  height: 540px;
+  max-width: 500px;
+}
+
+.swiper-slide img {
+  display: block;
+  /* width: 100%; */
+}
+
+body.chakra-ui-dark #root .swiper .swiper-pagination-bullet {
+  background-color: #d6d6d6;
+}
