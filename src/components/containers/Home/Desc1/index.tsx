@@ -21,9 +21,10 @@ export default function Desc1() {
           <Box>
             <Heading size="2xl">Mencari Modal Untuk Usaha UMKM Kini Lebih Mudah!</Heading>
             <Text marginTop="25px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed inventore quasi consectetur sapiente nesciunt in fugiat et explicabo eligendi reprehenderit!</Text>
-            <Button marginTop="25px" size="lg" variant="solid" colorScheme="blue">
+            <Flex flexWrap="wrap"></Flex>
+            {/* <Button marginTop="25px" size="lg" variant="solid" colorScheme="blue">
               Daftar Sekarang!
-            </Button>
+            </Button> */}
           </Box>
         </Box>
       </Container>

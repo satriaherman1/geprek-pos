@@ -8,7 +8,13 @@ export default function Header() {
       <Container maxW={containerMaxWidth} display="flex" marginY={mediumDevices ? "10vh" : "5vh"} justifyContent="space-between" flexDir={mediumDevices ? "row" : "column-reverse"} rowGap="40px">
         <Box display="flex" alignItems="center" flexBasis={mediumDevices ? "48%" : "100%"}>
           <Box>
-            <Heading size="2xl">Temukan Modal Usaha untuk Bisnis UMKM Anda</Heading>
+            <Heading size="2xl">
+              Temukan Modal Usaha untuk Bisnis{" "}
+              <Box as="span" color="blue.500">
+                UMKM
+              </Box>{" "}
+              Anda
+            </Heading>
             <Text marginTop="25px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed inventore quasi consectetur sapiente nesciunt in fugiat et explicabo eligendi reprehenderit!</Text>
             <Button marginTop="25px" size="lg" variant="solid" colorScheme="blue">
               Daftar Sekarang!
