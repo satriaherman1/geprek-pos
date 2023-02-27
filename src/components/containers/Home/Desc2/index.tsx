@@ -5,8 +5,9 @@ import { HiOutlineDocumentText } from "react-icons/hi";
 
 export default function Desc2() {
   const [mediumDevices] = useMediaQuery(mediumBreakpoints);
+
   return (
-    <Box marginTop="10vh">
+    <Box paddingY={mediumDevices ? "17vh" : "9vh"}>
       <Container maxW={containerMaxWidth} display="flex" marginY={mediumDevices ? "10vh" : "5vh"} justifyContent="space-between" flexDir={mediumDevices ? "row" : "column-reverse"} gap="30px">
         <Box display="flex" alignItems="center" flexBasis={mediumDevices ? "38%" : "100%"}>
           <Box>

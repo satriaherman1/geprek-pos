@@ -17,6 +17,10 @@ export default function FaQ() {
       question: "Apakah InvestKU aman?",
       answer: "Ya, InvestKU merupakan platform crowdfunding yang aman karena telah terdaftar dan diawasi oleh OJK",
     },
+    {
+      question: "Berapa lama proses verifikasi di InvestKU?",
+      answer: "Proses verifikasi data di InvestKU membutuhkan waktu sekitar 1 - 2 hari tergantung berkas yang dikirimkan",
+    },
   ];
   return (
     <Box paddingY={mediumScreen ? "8vh" : "4vh"}>

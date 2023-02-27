@@ -32,7 +32,7 @@ export default function Navbar() {
   ];
 
   return (
-    <Box as="nav" paddingY="20px">
+    <Box as="nav" paddingY="20px" fontWeight={500}>
       <Container maxW={containerMaxWidth} display="flex" alignItems="center" justifyContent="space-between">
         <Heading as="h4" size="md">
           Invest

@@ -15,10 +15,19 @@ export default function Header() {
               </Box>{" "}
               Anda
             </Heading>
-            <Text marginTop="25px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed inventore quasi consectetur sapiente nesciunt in fugiat et explicabo eligendi reprehenderit!</Text>
+            <Text marginTop="25px" textTransform="capitalize">
+              kini mencari modal usaha semudah membuka ponsel hp anda Bersama InvestKU. Cukup dengan mengisikan data UMKM anda dan tunggu verifikasi dari sistem kami untuk mendapatkan dana!
+            </Text>
             <Button marginTop="25px" size="lg" variant="solid" colorScheme="blue">
               Daftar Sekarang!
             </Button>
+
+            <Flex gap="20px">
+              <Box>
+                <Text marginTop="40px">Diawasi Oleh :</Text>
+                <Image src="https://upload.wikimedia.org/wikipedia/commons/8/83/OJK_Logo.png" width="120px" />
+              </Box>
+            </Flex>
           </Box>
         </Box>
 

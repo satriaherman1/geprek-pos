@@ -7,6 +7,8 @@ export default function Sponsorship() {
     "https://res.cloudinary.com/dbg3ckwtz/image/upload/v1677386769/investment-competition/sponsorship/shopee_wzlegm.png",
     "https://res.cloudinary.com/dbg3ckwtz/image/upload/v1677386768/investment-competition/sponsorship/grab_qxvwh6.svg",
     "https://res.cloudinary.com/dbg3ckwtz/image/upload/v1677386768/investment-competition/sponsorship/google_fpgcsz.svg",
+    "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    "https://www.pertamina.com/Media/Image/Pertamina.png",
   ];
 
   const bg = useColorModeValue("#fafafa", "blackAlpha.200");
