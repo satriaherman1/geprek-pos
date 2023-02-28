@@ -11,6 +11,7 @@ import Navbar from "@src/components/fragments/Navbar";
 import Joyride, { CallBackProps, STATUS } from "react-joyride";
 
 import { useEffect, useState } from "react";
+import JoinUs from "@src/components/containers/Home/JoinUs";
 
 interface State {
   stepIndex: number;
@@ -87,6 +88,7 @@ export default function Home() {
       <Timeline />
       {/* <Desc1 /> */}
       <Desc2 />
+      <JoinUs />
       <UmkmList />
       {/* <Review /> */}
       <FaQ />

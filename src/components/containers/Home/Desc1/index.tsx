@@ -19,7 +19,7 @@ export default function Desc1() {
 
         <Box display="flex" alignItems="center" flexBasis={mediumDevices ? "48%" : "100%"}>
           <Box>
-            <Heading size="2xl">Mencari Modal Untuk Usaha UMKM Kini Lebih Mudah!</Heading>
+            <Heading size="2xl">Membantu Menaikkan Modal UMKM Anda</Heading>
             <Text marginTop="25px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed inventore quasi consectetur sapiente nesciunt in fugiat et explicabo eligendi reprehenderit!</Text>
             <Flex flexWrap="wrap"></Flex>
             {/* <Button marginTop="25px" size="lg" variant="solid" colorScheme="blue">
