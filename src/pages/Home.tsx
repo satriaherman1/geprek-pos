@@ -54,7 +54,7 @@ export default function Home() {
     setJoyrideStatus(onboardingStatus);
   }, []);
 
-  useAOS();
+  useAOS({ once: true });
 
   return (
     <>
@@ -62,12 +62,12 @@ export default function Home() {
 
       <Navbar />
       <Header />
-      <Sponsorship />
       <Timeline />
       {/* <Desc1 /> */}
       <Desc2 />
       <JoinUs />
       <UmkmList />
+      <Sponsorship />
       {/* <Review /> */}
       <FaQ />
       <Footer />

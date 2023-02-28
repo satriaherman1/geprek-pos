@@ -10,37 +10,39 @@ export default function Desc2() {
   useAOS();
 
   return (
-    <Box paddingY={mediumDevices ? "17vh" : "9vh"} data-aos="fade">
+    <Box paddingY={mediumDevices ? "17vh" : "9vh"}>
       <Container maxW={containerMaxWidth} display="flex" marginY={mediumDevices ? "10vh" : "5vh"} justifyContent="space-between" flexDir={mediumDevices ? "row" : "column-reverse"} gap="30px">
         <Box display="flex" alignItems="center" flexBasis={mediumDevices ? "38%" : "100%"}>
           <Box>
-            <Heading size="2xl">
+            <Heading size="2xl" data-aos="fade">
               Dapatkan{" "}
               <Box as="span" color="blue.500">
                 Benefit
               </Box>{" "}
               di InvestKU
             </Heading>
-            <Text marginTop="25px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed inventore quasi consectetur sapiente nesciunt in fugiat et explicabo eligendi reprehenderit!</Text>
+            <Text marginTop="25px" data-aos="fade">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed inventore quasi consectetur sapiente nesciunt in fugiat et explicabo eligendi reprehenderit!
+            </Text>
             {/* <Button marginTop="25px" size="lg" variant="solid" colorScheme="blue">
               Dapatkan Keuntungan!
             </Button> */}
             <Flex flexWrap="wrap" marginTop="30px" rowGap="20px" justifyContent="space-between">
               <Box flexBasis={mediumDevices ? "48%" : "100%"}>
                 <List display="flex" flexDir="column" rowGap="20px">
-                  <ListItem display="flex" alignItems="center" columnGap="10px">
+                  <ListItem display="flex" alignItems="center" columnGap="10px" data-aos="fade">
                     <Icon color="green.500" as={BiTimer} display="inline-block" fontSize="35px" w="35px" />
                     <Text whiteSpace="nowrap" fontWeight="600" fontSize="22px">
                       Proses Verifikasi Cepat
                     </Text>
                   </ListItem>
-                  <ListItem display="flex" alignItems="center" columnGap="10px">
+                  <ListItem display="flex" alignItems="center" columnGap="10px" data-aos="fade">
                     <Icon color="green.500" as={BiCheckShield} display="inline-block" fontSize="35px" w="35px" />
                     <Text whiteSpace="nowrap" fontWeight="600" fontSize="22px">
                       Sudah mendapat izin OJK
                     </Text>
                   </ListItem>
-                  <ListItem display="flex" alignItems="center" columnGap="10px">
+                  <ListItem display="flex" alignItems="center" columnGap="10px" data-aos="fade">
                     <Icon color="green.500" as={HiOutlineDocumentText} display="inline-block" fontSize="35px" w="35px" />
                     <Text whiteSpace="nowrap" fontWeight="600" fontSize="22px">
                       Persyaratan yang gak ribet
@@ -51,7 +53,7 @@ export default function Desc2() {
             </Flex>
           </Box>
         </Box>
-        <Flex justifyContent="space-between" flexBasis={mediumDevices ? "58%" : "100%"}>
+        <Flex justifyContent="space-between" flexBasis={mediumDevices ? "58%" : "100%"} data-aos="fade">
           <Image
             src="https://res.cloudinary.com/dbg3ckwtz/image/upload/v1677477042/investment-competition/benefit_tkmfno.png"
             loading="lazy"

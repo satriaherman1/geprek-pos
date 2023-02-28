@@ -1,9 +1,12 @@
 import { Box, Container, Flex, Heading, Image, Text, useMediaQuery } from "@chakra-ui/react";
 import { containerMaxWidth, fallbackSrc, mediumBreakpoints } from "@src/definitions/variables";
+import useAOS from "@src/utils/hooks/useAos";
 
 export default function AboutUsHeader() {
   const bgUrl = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1715&q=80";
   const [mediumScreen] = useMediaQuery(mediumBreakpoints);
+
+  // useAOS({ once: true });
 
   return (
     <Box py="12vh">

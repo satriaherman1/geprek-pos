@@ -5,7 +5,8 @@ import useAOS from "@src/utils/hooks/useAos";
 export default function Header() {
   const [mediumDevices] = useMediaQuery(mediumBreakpoints);
 
-  useAOS();
+  useAOS({ once: true });
+
   return (
     <Box as="header" data-aos="fade">
       <Container maxW={containerMaxWidth} display="flex" marginY={mediumDevices ? "10vh" : "5vh"} justifyContent="space-between" flexDir={mediumDevices ? "row" : "column-reverse"} rowGap="40px">

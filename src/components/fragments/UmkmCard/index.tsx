@@ -1,5 +1,6 @@
 import { Box, BoxProps, Button, ButtonGroup, Card, CardBody, CardFooter, Divider, Flex, Heading, Image, Progress, Stack, Text, useColorModeValue } from "@chakra-ui/react";
 import { boxShadow } from "@src/definitions/variables";
+import useAOS from "@src/utils/hooks/useAos";
 
 interface IumkmCard {
   name: string;
@@ -16,8 +17,11 @@ export default function UmkmCard({ name, imageUrl, description }: IumkmCard) {
     borderRadius: "10px",
   };
   const shadow = useColorModeValue(boxShadow, "unset");
+
+  useAOS({ once: true });
+
   return (
-    <Card maxW="sm" w="97%" mx="auto" boxShadow={shadow}>
+    <Card maxW="sm" w="97%" mx="auto" boxShadow={shadow} data-aos="fade">
       <CardBody>
         <Box {...bgConfig} />
         <Stack mt="6" spacing="3">

@@ -50,10 +50,12 @@ export default function UmkmList() {
   return (
     <Box paddingY={mediumScreen ? "8vh" : "4vh"} bgColor={bgColor} className="umkm-list">
       <Container maxW={containerMaxWidth}>
-        <Heading as="h1" size="xl">
+        <Heading as="h1" size="xl" data-aos="fade">
           Daftar UMKM Kami
         </Heading>
-        <Text mt={2}>Daftar UMKM yang mendaftar</Text>
+        <Text mt={2} data-aos="fade">
+          Daftar UMKM yang mendaftar
+        </Text>
         <Swiper
           // effect={"coverflow"}
           // slidesOffsetBefore={20}
@@ -70,7 +72,7 @@ export default function UmkmList() {
         >
           {umkmDataList.map((data) => (
             <SwiperSlide key={data.imageUrl}>
-              <UmkmCard {...data} />
+              <UmkmCard {...data} data-aos="fade" />
             </SwiperSlide>
           ))}
         </Swiper>

@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 export default function useAOS(config?: any) {
   useEffect(() => {
     AOS.init(config);
+
     AOS.refresh();
   }, []);
 

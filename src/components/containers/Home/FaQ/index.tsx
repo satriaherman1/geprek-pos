@@ -1,5 +1,6 @@
 import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Container, Heading, Text, useMediaQuery } from "@chakra-ui/react";
 import { containerMaxWidth, mediumBreakpoints } from "@src/definitions/variables";
+import useAOS from "@src/utils/hooks/useAos";
 
 export default function FaQ() {
   const [mediumScreen] = useMediaQuery(mediumBreakpoints);
@@ -22,16 +23,19 @@ export default function FaQ() {
       answer: "Proses verifikasi data di InvestKU membutuhkan waktu sekitar 1 - 2 hari tergantung berkas yang dikirimkan",
     },
   ];
+
+  useAOS({ once: true });
+
   return (
     <Box paddingY={mediumScreen ? "8vh" : "4vh"}>
       <Container maxW={containerMaxWidth}>
-        <Box>
+        <Box data-aos="fade">
           <Heading as="h1" size="xl">
             Frequenly Ask Questions
           </Heading>
           <Text mt={2}>Beberapa pertanyaan yang sering ditanyakan tentang InvestKU</Text>
         </Box>
-        <Accordion defaultIndex={[0]} allowMultiple marginTop="40px">
+        <Accordion defaultIndex={[0]} allowMultiple marginTop="40px" data-aos="fade">
           {faqList.map((faq, key) => (
             <AccordionItem>
               <h2>

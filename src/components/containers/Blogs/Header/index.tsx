@@ -13,7 +13,9 @@ export default function HeaderBlog(props: BoxProps) {
             loading="lazy"
             fallbackSrc={fallbackSrc}
           />
-          <Heading marginTop="20px">Roki Coffee Shop Berhasil meraih modal 100 juta dari InvestKU</Heading>
+          <Heading marginTop="20px" size="lg">
+            Roki Coffee Shop Berhasil meraih modal 100 juta dari InvestKU
+          </Heading>
 
           <Text marginTop="12px">29 menit yang lalu - 5 menit membaca</Text>
         </Box>

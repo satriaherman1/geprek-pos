@@ -1,11 +1,15 @@
 import { Box, Container, Divider, Flex, Heading, Text, useColorModeValue, useMediaQuery } from "@chakra-ui/react";
 import { containerMaxWidth, mediumBreakpoints } from "@src/definitions/variables";
+import useAOS from "@src/utils/hooks/useAos";
 
 export default function MoreAbout() {
   const bg = useColorModeValue("blue.900", "gray.700");
   const [mediumScreen] = useMediaQuery(mediumBreakpoints);
+
+  useAOS({ once: true });
+
   return (
-    <Box bg={bg} py="9vh" color="white">
+    <Box bg={bg} py="9vh" color="white" data-aos="fade">
       <Container maxW={containerMaxWidth}>
         <Flex position="relative" flexDir={mediumScreen ? "row" : "column"} justifyContent="space-between" gap="30px">
           <Box flexBasis={mediumScreen ? "38%" : "100%"}>

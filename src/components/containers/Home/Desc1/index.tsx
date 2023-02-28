@@ -1,10 +1,14 @@
 import { Box, Button, Container, Flex, Heading, Image, Text, useMediaQuery } from "@chakra-ui/react";
 import { containerMaxWidth, mediumBreakpoints } from "@src/definitions/variables";
+import useAOS from "@src/utils/hooks/useAos";
 
 export default function Desc1() {
   const [mediumDevices] = useMediaQuery(mediumBreakpoints);
+
+  useAOS({ once: true });
+
   return (
-    <Box marginTop="10vh">
+    <Box marginTop="10vh" data-aos="fade">
       <Container maxW={containerMaxWidth} display="flex" marginY={mediumDevices ? "10vh" : "5vh"} justifyContent="space-between" flexDir={mediumDevices ? "row" : "column"}>
         <Flex justifyContent="space-between" flexBasis={mediumDevices ? "48%" : "100%"}>
           <Image

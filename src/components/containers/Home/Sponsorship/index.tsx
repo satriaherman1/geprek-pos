@@ -1,5 +1,7 @@
-import { Box, Container, Image, useColorModeValue } from "@chakra-ui/react";
+import { Box, Container, Heading, Image, useColorModeValue } from "@chakra-ui/react";
+import SponsorWrapper from "@src/components/fragments/SponsorWrapper";
 import { containerMaxWidth } from "@src/definitions/variables";
+import useAOS from "@src/utils/hooks/useAos";
 import Marquee from "react-fast-marquee";
 
 export default function Sponsorship() {
@@ -13,15 +15,22 @@ export default function Sponsorship() {
 
   const bg = useColorModeValue("#fafafa", "blackAlpha.200");
 
+  useAOS({ once: true });
+
   return (
-    <Box background={bg} paddingY="30px">
-      <Container maxW={containerMaxWidth}>
-        <Marquee gradient={false} speed={60}>
-          {sponsorshipUrl.map((url) => (
-            <Image marginX="20px" key={url} src={url} width="200px" alt="" />
-          ))}
-        </Marquee>
+    <Box paddingY="30px">
+      <Container maxW={containerMaxWidth} data-aos="fade">
+        <Heading textAlign="center">Disponsori Oleh :</Heading>
       </Container>
+      <Box background={bg} paddingY="30px" marginTop="20px" data-aos="fade">
+        <Container maxW={containerMaxWidth}>
+          <Marquee gradient={false} speed={60}>
+            {sponsorshipUrl.map((url) => (
+              <SponsorWrapper marginX="20px" key={url} imageUrl={url} width="200px" />
+            ))}
+          </Marquee>
+        </Container>
+      </Box>
     </Box>
   );
 }
