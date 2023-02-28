@@ -39,7 +39,7 @@ export default function FaQ() {
           {faqList.map((faq, key) => (
             <AccordionItem>
               <h2>
-                <AccordionButton>
+                <AccordionButton paddingY="12px">
                   <Box as="span" flex="1" textAlign="left">
                     <Text fontWeight="bold">{faq.question}</Text>
                   </Box>
