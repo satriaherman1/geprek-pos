@@ -27,7 +27,7 @@ export default function Timeline() {
                 marginTop="36px"
                 fallbackSrc="https://res.cloudinary.com/dbg3ckwtz/image/upload/v1677231020/investment-competition/fallback_qvvcgt.svg"
               />
-              <Heading as="h3" size="lg" marginTop="39px">
+              <Heading as="h3" size="md" marginTop="39px">
                 Isi Data Usaha
               </Heading>
 
@@ -45,7 +45,7 @@ export default function Timeline() {
                 marginTop="36px"
                 fallbackSrc="https://res.cloudinary.com/dbg3ckwtz/image/upload/v1677231020/investment-competition/fallback_qvvcgt.svg"
               />
-              <Heading as="h3" size="lg" marginTop="39px">
+              <Heading as="h3" size="md" marginTop="39px">
                 Verifikasi Data
               </Heading>
 
@@ -63,7 +63,7 @@ export default function Timeline() {
                 marginTop="36px"
                 fallbackSrc="https://res.cloudinary.com/dbg3ckwtz/image/upload/v1677231020/investment-competition/fallback_qvvcgt.svg"
               />
-              <Heading as="h3" size="lg" marginTop="39px">
+              <Heading as="h3" size="md" marginTop="39px">
                 Berhasil
               </Heading>
 
