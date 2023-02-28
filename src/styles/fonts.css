@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap");
 /* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Open+Sans:wght@400;500&display=swap"); */
 
 #root h1,
@@ -8,7 +8,7 @@
 #root h5,
 #root h6 {
   font-family: "Montserrat", sans-serif;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
   letter-spacing: 1px;
   line-height: 120%;
 }
@@ -19,7 +19,6 @@
 #root footer,
 #root section {
   font-family: "Poppins", sans-serif;
-
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 1px;
@@ -27,5 +26,5 @@
 
 body p {
   margin-bottom: 0;
-  /* color: #1a202d; */
+  /* color: #293246; */
 }

@@ -13,6 +13,12 @@ export default function AboutUsHeader() {
             Kami adalah platform Crowdfunding Dana terbesar
           </Heading>
           <Text marginTop="22px">Menyediakan tempat bagi para UMKM untuk mencari modal bisnisnya. Telah terdaftar dan diawasi oleh OJK sejak tahun 2020</Text>
+          <Flex gap="20px">
+            <Box>
+              <Text marginTop="40px">Diawasi Oleh :</Text>
+              <Image src="https://upload.wikimedia.org/wikipedia/commons/8/83/OJK_Logo.png" width="120px" />
+            </Box>
+          </Flex>
         </Box>
         <Box flexBasis={mediumScreen ? "48%" : "100%"} pos="relative">
           <Image src={bgUrl} w="full" fallbackSrc={fallbackSrc} borderRadius="10px" />

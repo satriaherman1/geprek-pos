@@ -1,5 +1,6 @@
 import AboutUsHeader from "@src/components/containers/AboutUs/Header";
 import AboutUs from "@src/pages/About";
+import Blogs from "@src/pages/Blogs";
 
 import Home from "@src/pages/Home";
 import { createBrowserRouter } from "react-router-dom";
@@ -13,6 +14,10 @@ const appRouter = createBrowserRouter([
   {
     path: "/about-us",
     element: <AboutUs />,
+  },
+  {
+    path: "/blogs",
+    element: <Blogs />,
   },
 ]);
 

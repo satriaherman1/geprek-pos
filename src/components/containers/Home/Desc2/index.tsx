@@ -1,13 +1,16 @@
 import { Box, Button, Container, Flex, Heading, Image, Text, useMediaQuery, Icon, List, ListItem } from "@chakra-ui/react";
 import { boxShadow, containerMaxWidth, mediumBreakpoints } from "@src/definitions/variables";
+import useAOS from "@src/utils/hooks/useAos";
 import { BiCheckShield, BiTimer } from "react-icons/bi";
 import { HiOutlineDocumentText } from "react-icons/hi";
 
 export default function Desc2() {
   const [mediumDevices] = useMediaQuery(mediumBreakpoints);
 
+  useAOS();
+
   return (
-    <Box paddingY={mediumDevices ? "17vh" : "9vh"}>
+    <Box paddingY={mediumDevices ? "17vh" : "9vh"} data-aos="fade">
       <Container maxW={containerMaxWidth} display="flex" marginY={mediumDevices ? "10vh" : "5vh"} justifyContent="space-between" flexDir={mediumDevices ? "row" : "column-reverse"} gap="30px">
         <Box display="flex" alignItems="center" flexBasis={mediumDevices ? "38%" : "100%"}>
           <Box>

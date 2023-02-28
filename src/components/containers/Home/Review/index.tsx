@@ -39,7 +39,7 @@ export default function Review() {
 
   const [mediumScreen] = useMediaQuery(mediumBreakpoints);
   return (
-    <Box marginTop="10vh">
+    <Box marginTop="10vh" data-aos="fade">
       <Container maxW={containerMaxWidth}>
         <Heading>Review Pengguna</Heading>
         <Text>Testimoni dari pengguna investKU</Text>

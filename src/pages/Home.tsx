@@ -8,68 +8,44 @@ import Sponsorship from "@src/components/containers/Home/Sponsorship";
 import Timeline from "@src/components/containers/Home/Timeline";
 import UmkmList from "@src/components/containers/Home/UmkmList";
 import Navbar from "@src/components/fragments/Navbar";
-import Joyride, { CallBackProps, STATUS } from "react-joyride";
 
 import { useEffect, useState } from "react";
 import JoinUs from "@src/components/containers/Home/JoinUs";
-
-interface State {
-  stepIndex: number;
-  steps: any[];
-}
+import Onboarding from "@src/components/common/Onboarding";
+import { Step } from "react-joyride";
+import { StepProps } from "@src/components/common/Onboarding/onboarding";
+import useAOS from "@src/utils/hooks/useAos";
 
 export default function Home() {
-  const [state, setState] = useState<State>({
-    stepIndex: 0,
-    steps: [
-      {
-        target: ".navbar",
-        disableBeacon: true,
-        content: "Ini adalah Navigasi untuk berpindah pindah antar halaman",
-      },
-      {
-        target: ".dark-switch",
-        content: "Klik untuk pindah ke mode gelap",
-      },
-      {
-        target: ".nav-button",
-        content: "Klik untuk membuka navigasi halaman",
-      },
-      {
-        target: ".start-now",
-        content: "Klik untuk memulai pendaftaran UMKM anda!",
-        options: {
-          isLastStep: true,
-          // menetapkan callback pada tombol 'Last'
-          callback: () => {
-            console.log("Joyride selesai!");
-          },
-        },
-      },
-    ],
-  });
-
   const [joyrideStatus, setJoyrideStatus] = useState<boolean>(false);
 
-  const buttonStyles = {
-    options: {
-      primaryColor: "#319795",
+  const steps: StepProps[] = [
+    {
+      target: ".navbar",
+      disableBeacon: true,
+      content: "Ini adalah Navigasi untuk berpindah pindah antar halaman",
     },
-  };
+    {
+      target: ".dark-switch",
+      content: "Klik untuk pindah ke mode gelap",
+    },
+    {
+      target: ".nav-button",
+      content: "Klik untuk membuka navigasi halaman",
+    },
+    {
+      target: ".start-now",
+      content: "Klik untuk memulai pendaftaran UMKM anda!",
 
-  const onboardingLocale = {
-    next: "Lanjut",
-    back: "Kembali",
-    last: "Tutup",
-  };
-
-  const handleJoyrideCallback = (data: any) => {
-    const { action, index, status, type } = data;
-
-    if (action === "reset") {
-      localStorage.setItem("onboarding", "true");
-    }
-  };
+      options: {
+        isLastStep: true,
+        // menetapkan callback pada tombol 'Last'
+        callback: () => {
+          console.log("Joyride selesai!");
+        },
+      },
+    },
+  ];
 
   useEffect(() => {
     let onboardingStatus: any = localStorage.getItem("onboarding");
@@ -78,9 +54,11 @@ export default function Home() {
     setJoyrideStatus(onboardingStatus);
   }, []);
 
+  useAOS();
+
   return (
     <>
-      {!joyrideStatus && <Joyride locale={onboardingLocale} steps={state.steps} callback={handleJoyrideCallback} continuous={true} showSkipButton={false} styles={buttonStyles} />}
+      {!joyrideStatus && <Onboarding step={steps} />}
 
       <Navbar />
       <Header />
