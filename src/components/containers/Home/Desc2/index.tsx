@@ -7,7 +7,7 @@ import { HiOutlineDocumentText } from "react-icons/hi";
 export default function Desc2() {
   const [mediumDevices] = useMediaQuery(mediumBreakpoints);
 
-  useAOS();
+  useAOS({ once: true });
 
   return (
     <Box paddingY={mediumDevices ? "17vh" : "9vh"}>
@@ -32,19 +32,19 @@ export default function Desc2() {
                 <List display="flex" flexDir="column" rowGap="20px">
                   <ListItem display="flex" alignItems="center" columnGap="10px" data-aos="fade">
                     <Icon color="green.500" as={BiTimer} display="inline-block" fontSize="35px" w="35px" />
-                    <Text whiteSpace="nowrap" fontWeight="600" fontSize="22px">
+                    <Text whiteSpace="nowrap" fontWeight="600" fontSize="20px">
                       Proses Verifikasi Cepat
                     </Text>
                   </ListItem>
                   <ListItem display="flex" alignItems="center" columnGap="10px" data-aos="fade">
                     <Icon color="green.500" as={BiCheckShield} display="inline-block" fontSize="35px" w="35px" />
-                    <Text whiteSpace="nowrap" fontWeight="600" fontSize="22px">
+                    <Text whiteSpace="nowrap" fontWeight="600" fontSize="20px">
                       Sudah mendapat izin OJK
                     </Text>
                   </ListItem>
                   <ListItem display="flex" alignItems="center" columnGap="10px" data-aos="fade">
                     <Icon color="green.500" as={HiOutlineDocumentText} display="inline-block" fontSize="35px" w="35px" />
-                    <Text whiteSpace="nowrap" fontWeight="600" fontSize="22px">
+                    <Text whiteSpace="nowrap" fontWeight="600" fontSize="20px">
                       Persyaratan yang gak ribet
                     </Text>
                   </ListItem>

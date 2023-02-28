@@ -32,16 +32,16 @@ export default function UmkmCard({ name, imageUrl, description }: IumkmCard) {
 
         <Flex justifyContent="space-between" marginTop="20px">
           <Box>
-            <Text fontSize="10px" fontWeight="600">
+            <Text fontSize="16px" fontWeight="600">
               Harga per Lembar
             </Text>
             <Text>Rp. 2.000</Text>
           </Box>
           <Box>
-            <Text fontSize="10px" fontWeight="600">
+            <Text fontSize="16px" fontWeight="600">
               Total Lembar
             </Text>
-            <Text>Rp. 2.000</Text>
+            <Text>4300</Text>
           </Box>
         </Flex>
       </CardBody>

@@ -83,12 +83,22 @@ export default function Footer() {
               </Box>
             </Flex>
 
-            <Flex padding="20px 29px" borderRadius="10px" bg={joinUsBg} flexDir={largeScreen ? "row" : "column"} justifyContent="space-between" rowGap="10px" rounded="md" mt="20px">
+            <Flex
+              padding="20px 29px"
+              borderRadius="10px"
+              bg={joinUsBg}
+              flexDir={largeScreen ? "row" : "column"}
+              justifyContent="space-between"
+              alignItems="center"
+              rowGap="10px"
+              rounded="md"
+              mt="20px"
+            >
               <Box as="section">
                 <Heading color="white" size="md">
                   Gabung Sekarang!
                 </Heading>
-                <Text>Mari bergabung dengan kami</Text>
+                <Text marginTop="5px">Mari bergabung dengan kami</Text>
               </Box>
               <Button colorScheme="blue">Gabung Sekarang!</Button>
             </Flex>

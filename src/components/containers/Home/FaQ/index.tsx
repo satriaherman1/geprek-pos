@@ -41,7 +41,7 @@ export default function FaQ() {
               <h2>
                 <AccordionButton paddingY="12px">
                   <Box as="span" flex="1" textAlign="left">
-                    <Text fontWeight="bold">{faq.question}</Text>
+                    <Text fontWeight={700}>{faq.question}</Text>
                   </Box>
                   <AccordionIcon />
                 </AccordionButton>

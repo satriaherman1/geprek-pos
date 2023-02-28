@@ -1,4 +1,4 @@
-import { Box, Container, Heading, Image, useColorModeValue } from "@chakra-ui/react";
+import { Box, Container, Heading, Image, Text, useColorModeValue } from "@chakra-ui/react";
 import SponsorWrapper from "@src/components/fragments/SponsorWrapper";
 import { containerMaxWidth } from "@src/definitions/variables";
 import useAOS from "@src/utils/hooks/useAos";
@@ -20,9 +20,9 @@ export default function Sponsorship() {
   return (
     <Box paddingY="30px">
       <Container maxW={containerMaxWidth} data-aos="fade">
-        <Heading textAlign="center">Disponsori Oleh :</Heading>
+        <Text textAlign="center">Disponsori Oleh :</Text>
       </Container>
-      <Box background={bg} paddingY="30px" marginTop="20px" data-aos="fade">
+      <Box background="none" paddingY="20px" marginTop="20px" data-aos="fade">
         <Container maxW={containerMaxWidth}>
           <Marquee gradient={false} speed={60}>
             {sponsorshipUrl.map((url) => (

@@ -1,6 +1,7 @@
-import { Box, Container, Flex, Heading, Image, Text, useMediaQuery } from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, Image, Text, useMediaQuery, Icon } from "@chakra-ui/react";
 import { containerMaxWidth, fallbackSrc, mediumBreakpoints } from "@src/definitions/variables";
 import useAOS from "@src/utils/hooks/useAos";
+import { FaFacebook, FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 export default function AboutUsHeader() {
   const bgUrl = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1715&q=80";
@@ -16,6 +17,7 @@ export default function AboutUsHeader() {
             Kami adalah platform Crowdfunding Dana terbesar
           </Heading>
           <Text marginTop="22px">Menyediakan tempat bagi para UMKM untuk mencari modal bisnisnya. Telah terdaftar dan diawasi oleh OJK sejak tahun 2020</Text>
+
           <Flex gap="20px">
             <Box>
               <Text marginTop="40px">Diawasi Oleh :</Text>
