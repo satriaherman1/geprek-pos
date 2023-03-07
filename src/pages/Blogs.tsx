@@ -2,6 +2,7 @@ import { Box, Container, Flex, useMediaQuery } from "@chakra-ui/react";
 import Footer from "@src/components/common/Footer";
 import BlogBody from "@src/components/containers/Blogs/Body";
 import HeaderBlog from "@src/components/containers/Blogs/Header";
+import BlogList from "@src/components/fragments/BlogList";
 import Navbar from "@src/components/fragments/Navbar";
 import { containerMaxWidth, mediumBreakpoints } from "@src/definitions/variables";
 
@@ -14,6 +15,9 @@ export default function Blogs() {
         <Box flexBasis={mediumScreen ? "70%" : "100%"}>
           <HeaderBlog />
           <BlogBody />
+        </Box>
+        <Box flexBasis={mediumScreen ? "28%" : "100%"}>
+          <BlogList />
         </Box>
       </Container>
       <Footer />
