@@ -4,6 +4,7 @@ import Switch from "@src/components/common/Switch";
 import { navigationList } from "@src/components/fragments/Navbar/data";
 import { boxShadowColor, containerMaxWidth, mediumBreakpoints } from "@src/definitions/variables";
 import { useEffect, useState } from "react";
+import "./style.css";
 
 import { Link } from "react-router-dom";
 
@@ -79,11 +80,11 @@ export default function Navbar() {
             {navigationList.map((nav) => (
               <>
                 {nav.url == location.pathname ? (
-                  <ListItem padding="19px 20px" key={nav.url} color={linkActiveColor}>
+                  <ListItem className="nav-list-small" padding="19px 20px" key={nav.url} color={linkActiveColor}>
                     <Link to={nav.url}>{nav.name}</Link>
                   </ListItem>
                 ) : (
-                  <ListItem padding="19px 20px" key={nav.url}>
+                  <ListItem className="nav-list-small" padding="19px 20px" key={nav.url}>
                     <Link to={nav.url}>{nav.name}</Link>
                   </ListItem>
                 )}
