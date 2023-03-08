@@ -1,8 +1,9 @@
-import { CloseIcon } from "@chakra-ui/icons";
-import { Box, Container, Divider, Flex, Heading, Image, List, ListItem, useColorModeValue, useMediaQuery } from "@chakra-ui/react";
+import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
+import { Box, Container, Divider, Flex, Heading, Icon, List, ListItem, useColorModeValue, useMediaQuery } from "@chakra-ui/react";
 import Switch from "@src/components/common/Switch";
 import { boxShadow, boxShadowColor, containerMaxWidth, mediumBreakpoints } from "@src/definitions/variables";
 import { useEffect, useState } from "react";
+import { FaHamburger } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
@@ -66,10 +67,11 @@ export default function Navbar() {
           <Switch />
         </Box>
 
-        <Box as="button" className="nav-button" display={mediumScreen ? "none" : "flex"} flexDir="column" gap="7px" onClick={() => setOpenNav(true)}>
-          <Box as="span" display="block" width="30px" borderRadius="30px" height="2px" bgColor={hamburgerBg} />
-          <Box as="span" display="block" marginLeft="auto" width="23px" borderRadius="30px" height="2px" bgColor={hamburgerBg} />
-          <Box as="span" display="block" width="30px" borderRadius="30px" height="2px" bgColor={hamburgerBg} />
+        <Box as="button" className="nav-button" display={mediumScreen ? "none" : "flex"} flexDir="column" onClick={() => setOpenNav(true)}>
+          {/* <Box as="span" display="inline-block" width="30px" borderRadius="30px" height="2.3px" bgColor={hamburgerBg} />
+          <Box as="span" display="inline-block" marginLeft="auto" width="23px" borderRadius="30px" height="2.4px" bgColor={hamburgerBg} />
+          <Box as="span" display="inline-block" width="30px" borderRadius="30px" height="2.3px" bgColor={hamburgerBg} /> */}
+          <HamburgerIcon fontSize="29px" />
         </Box>
       </Container>
 
