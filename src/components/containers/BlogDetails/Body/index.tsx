@@ -17,6 +17,7 @@ export default function BlogBodyDetails(props: BoxProps) {
       isClosable: true,
     });
   };
+
   return (
     <Box {...props} marginTop="2vh">
       <Text>

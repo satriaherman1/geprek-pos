@@ -1,14 +1,14 @@
-import { Box, Button, Container, Flex, Heading, Image, Text, useMediaQuery } from "@chakra-ui/react";
+import { Box, BoxProps, Button, Container, Flex, Heading, Image, Text, useMediaQuery } from "@chakra-ui/react";
 import { containerMaxWidth, mediumBreakpoints } from "@src/definitions/variables";
 import useAOS from "@src/utils/hooks/useAos";
 
-export default function Header() {
+export default function Header(props: BoxProps) {
   const [mediumDevices] = useMediaQuery(mediumBreakpoints);
 
   useAOS({ once: true });
 
   return (
-    <Box as="header" data-aos="fade">
+    <Box {...props} as="header" data-aos="fade">
       <Container maxW={containerMaxWidth} display="flex" marginY={mediumDevices ? "10vh" : "5vh"} justifyContent="space-between" flexDir={mediumDevices ? "row" : "column-reverse"} rowGap="40px">
         <Box display="flex" alignItems="center" flexBasis={mediumDevices ? "48%" : "100%"}>
           <Box>

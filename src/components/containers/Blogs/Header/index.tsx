@@ -1,10 +1,13 @@
-import { Box, BoxProps, Container, Heading, Image, Text, useMediaQuery } from "@chakra-ui/react";
+import { Box, BoxProps, Button, Container, Heading, Image, Text, useColorModeValue, useMediaQuery } from "@chakra-ui/react";
 import { containerMaxWidth, fallbackSrc, mediumBreakpoints } from "@src/definitions/variables";
+import { Link } from "react-router-dom";
 
 export default function HeaderBlog(props: BoxProps) {
   const [mediumScreen] = useMediaQuery(mediumBreakpoints);
+  const bg = useColorModeValue("gray.50", "gray.700");
+
   return (
-    <Box {...props} marginTop={mediumScreen ? "10vh" : "2vh"} bg="gray.50" padding="40px 10px">
+    <Box {...props} marginTop={"40px"} bg={bg} padding="40px 10px" borderRadius="10px">
       <Container maxW={containerMaxWidth} display="flex">
         <Box>
           <Image
@@ -17,7 +20,14 @@ export default function HeaderBlog(props: BoxProps) {
             Roki Coffee Shop Berhasil meraih modal 100 juta dari InvestKU
           </Heading>
 
-          <Text marginTop="12px">29 menit yang lalu - 5 menit membaca</Text>
+          <Text marginTop="12px" fontSize="14px">
+            29 menit yang lalu - 5 menit membaca
+          </Text>
+          <Link to="/blogs/details">
+            <Button colorScheme="blue" marginTop="20px">
+              Baca Selengkapnya
+            </Button>
+          </Link>
         </Box>
       </Container>
     </Box>

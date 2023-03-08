@@ -61,7 +61,7 @@ export default function Home() {
       {!joyrideStatus && <Onboarding step={steps} />}
 
       <Navbar />
-      <Header />
+      <Header marginTop="120px" />
       <Timeline />
       {/* <Desc1 /> */}
       <Desc2 />

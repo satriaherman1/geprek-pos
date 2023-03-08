@@ -3,3 +3,7 @@ html,
 body {
   overflow-x: hidden !important;
 }
+
+.intercom-lightweight-app {
+  z-index: 9999;
+}

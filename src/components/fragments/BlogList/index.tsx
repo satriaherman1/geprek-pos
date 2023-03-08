@@ -1,20 +1,29 @@
-import { Box, BoxProps, Heading, Image, Text, useMediaQuery } from "@chakra-ui/react";
+import { Box, BoxProps, Heading, Image, Text, useColorModeValue, useMediaQuery } from "@chakra-ui/react";
 import { mediumBreakpoints } from "@src/definitions/variables";
-import { Link } from "react-router-dom";
+import FormatService from "@src/utils/services/format.service";
 
-export default function BlogList() {
+interface IBloglist {
+  imageUrl: string;
+  title: string;
+  date: string;
+}
+
+export default function BlogList({ imageUrl, title, date }: IBloglist) {
   const [mediumScreen] = useMediaQuery(mediumBreakpoints);
+  const detailsColor = useColorModeValue("blackAlpha.800", "white");
+  const formatService = new FormatService();
+
   return (
     <Box as="a" href="/blogs/details" flexBasis="48%" display="flex" gap="20px" padding="8px">
-      <Box flexBasis="40%">
-        <Image src="https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80" width="100%" />
+      <Box flexBasis="35%">
+        <Box bg={`url('${imageUrl}')`} bgSize="cover" width="120px" height="80px" rounded="md" />
       </Box>
       <Box>
         <Heading as="h6" size="sm" textTransform="capitalize">
-          Penerimaan funding dana
+          {formatService.truncate(title, 30)}
         </Heading>
-        <Text color="blackAlpha.800" marginTop="7px" fontSize="14px">
-          10 hari | 10 menit baca
+        <Text color={detailsColor} marginTop="7px" fontSize="14px">
+          {date}
         </Text>
       </Box>
     </Box>
