@@ -13,7 +13,7 @@ export default function WhoAreWe() {
     <Box bg={bg} py="9vh" color="white" data-aos="fade">
       <Container maxW="700px" textAlign="center">
         <Heading>Siapa Kami?</Heading>
-        <Text marginTop="20px">Kami adalah platform crowdfunding untuk UMKM terbesar di Indonesia</Text>
+        <Text marginTop="20px">Kami adalah platform crowdfunding untuk UMKM terbesar di Indonesia. Menyediakan modal bagi para UMKM agar bisa memajukan perekonomian negara</Text>
         <Flex marginTop="19px" gap="12px" color="white.700" justifyContent="center">
           <Box as="a">
             <Icon as={FaFacebook} />
