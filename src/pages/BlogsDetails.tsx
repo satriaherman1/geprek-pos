@@ -18,7 +18,7 @@ export default function BlogsDetails() {
   return (
     <>
       <Navbar />
-      <Container maxW={containerMaxWidth} marginTop={mediumScreen ? "120px" : "40px"} display="flex" justifyContent="space-between" flexDir={mediumScreen ? "row" : "column"}>
+      <Container maxW={containerMaxWidth} marginTop={mediumScreen ? "120px" : "70px"} display="flex" justifyContent="space-between" flexDir={mediumScreen ? "row" : "column"}>
         <Box flexBasis={mediumScreen ? "70%" : "100%"}>
           <HeaderBlogDetails />
           <BlogBodyDetails />

@@ -52,9 +52,6 @@ export default function Teams() {
           </Flex>
         ) : (
           <Swiper
-            // effect={"coverflow"}
-            // slidesOffsetBefore={20}
-            // slidesOffsetAfter={20}
             spaceBetween={20}
             // grabCursor
             slidesPerView={1}

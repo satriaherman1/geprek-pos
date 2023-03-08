@@ -1,18 +1,19 @@
 import { Box, Button, Container, Flex, Heading, Image, Text, useMediaQuery, Icon, List, ListItem } from "@chakra-ui/react";
-import { boxShadow, containerMaxWidth, mediumBreakpoints } from "@src/definitions/variables";
+import { boxShadow, containerMaxWidth, largeBreakpoints, mediumBreakpoints } from "@src/definitions/variables";
 import useAOS from "@src/utils/hooks/useAos";
 import { BiCheckShield, BiTimer } from "react-icons/bi";
 import { HiOutlineDocumentText } from "react-icons/hi";
 
 export default function Desc2() {
-  const [mediumDevices] = useMediaQuery(mediumBreakpoints);
+  const [mediumScreen] = useMediaQuery(mediumBreakpoints);
+  const [largeScreen] = useMediaQuery(largeBreakpoints);
 
   useAOS({ once: true });
 
   return (
-    <Box paddingY={mediumDevices ? "17vh" : "9vh"}>
-      <Container maxW={containerMaxWidth} display="flex" marginY={mediumDevices ? "10vh" : "5vh"} justifyContent="space-between" flexDir={mediumDevices ? "row" : "column-reverse"} gap="30px">
-        <Box display="flex" alignItems="center" flexBasis={mediumDevices ? "38%" : "100%"}>
+    <Box paddingY={mediumScreen ? "17vh" : "9vh"}>
+      <Container maxW={containerMaxWidth} display="flex" marginY={mediumScreen ? "10vh" : "5vh"} justifyContent="space-between" flexDir={largeScreen ? "row" : "column-reverse"} gap="30px">
+        <Box display="flex" alignItems="center" flexBasis={mediumScreen ? "38%" : "100%"}>
           <Box>
             <Heading size="2xl" data-aos="fade">
               Dapatkan{" "}
@@ -22,13 +23,11 @@ export default function Desc2() {
               di InvestKU
             </Heading>
             <Text marginTop="25px" data-aos="fade">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed inventore quasi consectetur sapiente nesciunt in fugiat et explicabo eligendi reprehenderit!
+              Dapatkan berbagai keuntungan saat mendaftarkan bisnis anda di platform crowdfunding kami
             </Text>
-            {/* <Button marginTop="25px" size="lg" variant="solid" colorScheme="blue">
-              Dapatkan Keuntungan!
-            </Button> */}
+
             <Flex flexWrap="wrap" marginTop="30px" rowGap="20px" justifyContent="space-between">
-              <Box flexBasis={mediumDevices ? "48%" : "100%"}>
+              <Box flexBasis={mediumScreen ? "48%" : "100%"}>
                 <List display="flex" flexDir="column" rowGap="20px">
                   <ListItem display="flex" alignItems="center" columnGap="10px" data-aos="fade">
                     <Icon color="green.500" as={BiTimer} display="inline-block" fontSize="35px" w="35px" />
@@ -53,7 +52,7 @@ export default function Desc2() {
             </Flex>
           </Box>
         </Box>
-        <Flex justifyContent="space-between" flexBasis={mediumDevices ? "58%" : "100%"} data-aos="fade">
+        <Flex justifyContent="space-between" flexBasis={mediumScreen ? "58%" : "100%"} data-aos="fade">
           <Image
             src="https://res.cloudinary.com/dbg3ckwtz/image/upload/v1677477042/investment-competition/benefit_tkmfno.png"
             loading="lazy"

@@ -2,6 +2,7 @@ import { Box, Button, Container, Flex, Heading, List, ListItem, Text, useColorMo
 import { containerMaxWidth, largeBreakpoints, mediumBreakpoints } from "@src/definitions/variables";
 import { FaFacebookF, FaInstagram, FaPhone, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const [mediumScreen] = useMediaQuery(mediumBreakpoints);
@@ -12,7 +13,7 @@ export default function Footer() {
   return (
     <Box as="footer" paddingTop="50px" bg={footerBg} color="white">
       <Container maxW={containerMaxWidth}>
-        <Flex justifyContent="space-between" flexDir={mediumScreen ? "row" : "column"}>
+        <Flex justifyContent="space-between" flexDir={largeScreen ? "row" : "column"}>
           <Box flexBasis={largeScreen ? "37%" : mediumScreen ? "100%" : "100%"}>
             <Heading as="h4" size="lg">
               Invest
@@ -87,9 +88,9 @@ export default function Footer() {
               padding="20px 29px"
               borderRadius="10px"
               bg={joinUsBg}
-              flexDir={largeScreen ? "row" : "column"}
+              flexDir={mediumScreen ? "row" : "column"}
               justifyContent="space-between"
-              alignItems="center"
+              alignItems={largeScreen ? "center" : "start"}
               rowGap="10px"
               rounded="md"
               mt="20px"
@@ -100,7 +101,9 @@ export default function Footer() {
                 </Heading>
                 <Text marginTop="5px">Mari bergabung dengan kami</Text>
               </Box>
-              <Button colorScheme="blue">Gabung Sekarang!</Button>
+              <Link to="/register">
+                <Button colorScheme="blue">Daftar Sekarang!</Button>
+              </Link>
             </Flex>
           </Flex>
         </Flex>

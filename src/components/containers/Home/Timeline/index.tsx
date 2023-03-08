@@ -15,7 +15,7 @@ export default function Timeline() {
       <Container maxW={containerMaxWidth}>
         <Heading data-aos="fade">Proses Pendaftaran</Heading>
         <Text data-aos="fade">Proses Pendaftaran Crowdfunding</Text>
-        <Flex marginTop="30px" textAlign="center" justifyContent="space-between" flexDir={mediumScreen ? "row" : "column"} rowGap="30px">
+        <Flex marginTop="30px" textAlign="center" justifyContent="space-between" flexDir={mediumScreen ? "row" : "column"} rowGap="30px" flexWrap="wrap">
           <Box as="section" flexBasis={largeScreen ? "31%" : mediumScreen ? "48%" : "100%"} data-aos="fade">
             <Box width="fit-content" borderRadius="20px" padding="25px 25px 40px 25px" bg={bg} boxShadow={colorMode == "light" ? boxShadow : "unset"}>
               <Image

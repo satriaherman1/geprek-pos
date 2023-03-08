@@ -4,6 +4,7 @@ import Blogs from "@src/pages/Blogs";
 import BlogsDetails from "@src/pages/BlogsDetails";
 
 import Home from "@src/pages/Home";
+import Register from "@src/pages/Register";
 import { createBrowserRouter } from "react-router-dom";
 
 const appRouter = createBrowserRouter([
@@ -23,6 +24,10 @@ const appRouter = createBrowserRouter([
   {
     path: "/blogs/details",
     element: <BlogsDetails />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
   },
 ]);
 

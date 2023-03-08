@@ -13,7 +13,7 @@ export default function JoinUs() {
       <Container maxW={containerMaxWidth}>
         <Box textAlign="center" color="white" position="relative" zIndex={3} maxW="700px" mx="auto">
           <Heading>Mari bergabung bersama kami</Heading>
-          <Text marginTop="12px"> Kembangkan bisnismu dengan modal dari kami. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis nostrum molestias</Text>
+          <Text marginTop="12px"> Kembangkan bisnismu dengan modal dari kami. Cukup daftarkan bisnis anda di platform crowdfunding kami dengan smartphone / laptop.</Text>
           <Flex justifyContent="center" marginTop="40px" gap="20px">
             <Button colorScheme="blue">Gabung Sekarang!</Button>
             <Button variant="outline" colorScheme="blue">

@@ -12,7 +12,7 @@ export default function Achievement() {
     <Box bg={bg} py="9vh" data-aos="fade">
       <Container maxW="900px" textAlign="center">
         <Heading>tujuan kami adalah untuk membantu umkm menemukan modalnya</Heading>
-        <Text marginTop="20px">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis quidem ipsa quam sapiente a .</Text>
+        <Text marginTop="20px">Dengan majunya UMKM akan menggerakkan perekonomian negara .</Text>
 
         <Flex rowGap="60px" flexDir={mediumScreen ? "row" : "column"} justifyContent="space-between" textAlign="center" marginTop="50px" maxW="600px" mx="auto">
           <Box>

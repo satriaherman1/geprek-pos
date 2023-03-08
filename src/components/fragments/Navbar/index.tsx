@@ -1,9 +1,10 @@
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { Box, Container, Divider, Flex, Heading, Icon, List, ListItem, useColorModeValue, useMediaQuery } from "@chakra-ui/react";
 import Switch from "@src/components/common/Switch";
-import { boxShadow, boxShadowColor, containerMaxWidth, mediumBreakpoints } from "@src/definitions/variables";
+import { navigationList } from "@src/components/fragments/Navbar/data";
+import { boxShadowColor, containerMaxWidth, mediumBreakpoints } from "@src/definitions/variables";
 import { useEffect, useState } from "react";
-import { FaHamburger } from "react-icons/fa";
+
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
@@ -11,39 +12,18 @@ export default function Navbar() {
   const [isBg, setIsBg] = useState<boolean>(false);
 
   const [mediumScreen] = useMediaQuery(mediumBreakpoints);
-  const hamburgerBg = useColorModeValue("blackAlpha.900", "white");
   const bg = useColorModeValue("white", "#282e39");
+  const linkActiveColor = useColorModeValue("blue.500", "blue.300");
   const boxShadow = useColorModeValue(boxShadowColor, "none");
 
-  const navigationList = [
-    {
-      name: "Beranda",
-      url: "/",
-    },
-    {
-      name: "Tentang Kami",
-      url: "/about-us",
-    },
-    {
-      name: "Blog",
-      url: "/blogs",
-    },
-    {
-      name: "Daftar",
-      url: "/register",
-    },
-  ];
-
   const setBgNavbar = () => {
-    window.scrollY > 40 ? setIsBg(true) : setIsBg(false);
+    window.scrollY > 20 ? setIsBg(true) : setIsBg(false);
   };
 
   useEffect(() => {
     window.addEventListener("scroll", setBgNavbar);
     return () => window.removeEventListener("scroll", setBgNavbar);
   });
-
-  console.log(isBg);
 
   return (
     <Box as="nav" paddingY="20px" fontWeight={500} className="navbar" bg={isBg ? bg : "unset"} boxShadow={isBg ? `0 0 30px ${boxShadow}` : "unset"} position="fixed" top={0} w="full" zIndex={998}>
@@ -57,9 +37,17 @@ export default function Navbar() {
 
         <List display={mediumScreen ? "flex" : "none"} columnGap="40px">
           {navigationList.map((nav) => (
-            <ListItem key={nav.url}>
-              <Link to={nav.url}>{nav.name}</Link>
-            </ListItem>
+            <>
+              {nav.url == location.pathname ? (
+                <ListItem key={nav.url} color={linkActiveColor}>
+                  <Link to={nav.url}>{nav.name}</Link>
+                </ListItem>
+              ) : (
+                <ListItem key={nav.url}>
+                  <Link to={nav.url}>{nav.name}</Link>
+                </ListItem>
+              )}
+            </>
           ))}
         </List>
 
@@ -68,9 +56,6 @@ export default function Navbar() {
         </Box>
 
         <Box as="button" className="nav-button" display={mediumScreen ? "none" : "flex"} flexDir="column" onClick={() => setOpenNav(true)}>
-          {/* <Box as="span" display="inline-block" width="30px" borderRadius="30px" height="2.3px" bgColor={hamburgerBg} />
-          <Box as="span" display="inline-block" marginLeft="auto" width="23px" borderRadius="30px" height="2.4px" bgColor={hamburgerBg} />
-          <Box as="span" display="inline-block" width="30px" borderRadius="30px" height="2.3px" bgColor={hamburgerBg} /> */}
           <HamburgerIcon fontSize="29px" />
         </Box>
       </Container>
@@ -92,9 +77,17 @@ export default function Navbar() {
           <Divider />
           <List display="flex" flexDir="column" marginTop="20px">
             {navigationList.map((nav) => (
-              <ListItem key={nav.url} padding="25px 22px">
-                <Link to={nav.url}>{nav.name}</Link>
-              </ListItem>
+              <>
+                {nav.url == location.pathname ? (
+                  <ListItem padding="19px 20px" key={nav.url} color={linkActiveColor}>
+                    <Link to={nav.url}>{nav.name}</Link>
+                  </ListItem>
+                ) : (
+                  <ListItem padding="19px 20px" key={nav.url}>
+                    <Link to={nav.url}>{nav.name}</Link>
+                  </ListItem>
+                )}
+              </>
             ))}
           </List>
 
