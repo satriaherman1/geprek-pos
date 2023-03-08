@@ -7,7 +7,7 @@ export default function HeaderBlog(props: BoxProps) {
   const bg = useColorModeValue("gray.50", "gray.700");
 
   return (
-    <Box {...props} marginTop={"40px"} bg={bg} padding="40px 10px" borderRadius="10px">
+    <Box {...props} bg={bg} padding="40px 10px" borderRadius="10px">
       <Container maxW={containerMaxWidth} display="flex">
         <Box>
           <Image

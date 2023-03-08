@@ -7,7 +7,7 @@ export default function BlogBody(props: BoxProps) {
   const [mediumScreen] = useMediaQuery(mediumBreakpoints);
 
   return (
-    <Box {...props} marginTop="20px" marginBottom="50px">
+    <Box {...props} marginBottom="50px">
       <Container maxW={containerMaxWidth}>
         <Heading as="h4" size="md">
           Berita Terbaru

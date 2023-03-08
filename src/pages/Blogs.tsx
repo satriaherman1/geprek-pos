@@ -17,13 +17,13 @@ export default function Blogs() {
   return (
     <>
       <Navbar />
-      <Container maxW={containerMaxWidth} marginTop={mediumScreen ? "120px" : "40px"} display="flex" justifyContent="space-between" flexDir={mediumScreen ? "row" : "column"}>
+      <Container maxW={containerMaxWidth} marginTop={mediumScreen ? "100px" : "40px"} display="flex" justifyContent="space-between" flexDir={mediumScreen ? "row" : "column"}>
         <Box flexBasis={mediumScreen ? "70%" : "100%"}>
           <HeaderBlog />
           <BlogBody />
         </Box>
         <Box flexBasis={mediumScreen ? "28%" : "100%"}>
-          <Box flexBasis={mediumScreen ? "28%" : "100%"} mt="40px" mb="20px" border={borderOptimize} p="20px" bgColor={bg} borderRadius="10px" h="fit-content">
+          <Box flexBasis={mediumScreen ? "28%" : "100%"} mt="0px" mb="20px" border={borderOptimize} p="20px" bgColor={bg} borderRadius="10px" h="fit-content">
             Tutorial untuk anda
             <Divider marginY="9px" />
             <Flex mt="20px" flexDir="column" rowGap="12px">
