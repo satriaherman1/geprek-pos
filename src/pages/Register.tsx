@@ -10,7 +10,7 @@ export default function Register() {
   return (
     <>
       <Navbar />
-      <Form marginTop={mediumScreen ? "120px" : "70px"} />
+      <Form marginTop={mediumScreen ? "140px" : "100px"} />
       <Footer />
     </>
   );
