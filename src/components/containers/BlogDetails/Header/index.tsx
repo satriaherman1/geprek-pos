@@ -1,15 +1,16 @@
-import { Box, BoxProps, Container, Heading, Image, Text, useMediaQuery } from "@chakra-ui/react";
+import { Box, BoxProps, Container, Heading, Image, Text, useColorModeValue, useMediaQuery } from "@chakra-ui/react";
 import { containerMaxWidth, fallbackSrc, mediumBreakpoints } from "@src/definitions/variables";
 
 export default function HeaderBlogDetails(props: BoxProps) {
   const [mediumScreen] = useMediaQuery(mediumBreakpoints);
+  const dateColor = useColorModeValue("#333", "gray.100");
   return (
     <Box {...props} marginTop={mediumScreen ? "0vh" : "2vh"} padding="10px 10px">
       <Box>
         <Box textAlign="center" px="0px">
           <Heading size="lg">Roki Coffee Shop Berhasil meraih modal funding 100 juta dari InvestKU</Heading>
 
-          <Text marginTop="12px" fontSize="14px" color="gray.100">
+          <Text marginTop="12px" fontSize="14px" color={dateColor}>
             29 menit yang lalu - 5 menit membaca
           </Text>
         </Box>
