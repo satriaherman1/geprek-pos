@@ -1,11 +1,8 @@
-import AboutUsHeader from "@src/components/containers/AboutUs/Header";
-import AboutUs from "@src/pages/About";
-import Blogs from "@src/pages/Blogs";
-import BlogsDetails from "@src/pages/BlogsDetails";
-
 import Home from "@src/pages/Home";
-import Register from "@src/pages/Register";
+
 import { createBrowserRouter } from "react-router-dom";
+import Sales from "@src/pages/Sales";
+import Stock from "@src/pages/Stock";
 
 const appRouter = createBrowserRouter([
   {
@@ -14,20 +11,12 @@ const appRouter = createBrowserRouter([
     caseSensitive: true,
   },
   {
-    path: "/about-us",
-    element: <AboutUs />,
+    path: "/sales",
+    element: <Sales />,
   },
   {
-    path: "/blogs",
-    element: <Blogs />,
-  },
-  {
-    path: "/blogs/details",
-    element: <BlogsDetails />,
-  },
-  {
-    path: "/register",
-    element: <Register />,
+    path: "/stock",
+    element: <Stock />,
   },
 ]);
 

@@ -1,76 +1,135 @@
-import Footer from "@src/components/common/Footer";
-import Desc1 from "@src/components/containers/Home/Desc1";
-import Desc2 from "@src/components/containers/Home/Desc2";
-import FaQ from "@src/components/containers/Home/FaQ";
-import Header from "@src/components/containers/Home/Header";
-import Review from "@src/components/containers/Home/Review";
-import Sponsorship from "@src/components/containers/Home/Sponsorship";
-import Timeline from "@src/components/containers/Home/Timeline";
-import UmkmList from "@src/components/containers/Home/UmkmList";
-import Navbar from "@src/components/fragments/Navbar";
-
 import { useEffect, useState } from "react";
-import JoinUs from "@src/components/containers/Home/JoinUs";
 import Onboarding from "@src/components/common/Onboarding";
-import { Step } from "react-joyride";
+
 import { StepProps } from "@src/components/common/Onboarding/onboarding";
-import useAOS from "@src/utils/hooks/useAos";
+
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
+  useDisclosure,
+  List,
+  ListItem,
+  Image,
+} from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
-  const [joyrideStatus, setJoyrideStatus] = useState<boolean>(false);
-
-  const steps: StepProps[] = [
-    {
-      target: ".navbar",
-      disableBeacon: true,
-      content: "Ini adalah Navigasi untuk berpindah pindah antar halaman",
-    },
-    {
-      target: ".dark-switch",
-      content: "Klik untuk pindah ke mode gelap",
-    },
-    {
-      target: ".nav-button",
-      content: "Klik untuk membuka navigasi halaman",
-    },
-    {
-      target: ".start-now",
-      content: "Klik untuk memulai pendaftaran UMKM anda!",
-
-      options: {
-        isLastStep: true,
-        // menetapkan callback pada tombol 'Last'
-        callback: () => {
-          console.log("Joyride selesai!");
-        },
-      },
-    },
-  ];
-
-  useEffect(() => {
-    let onboardingStatus: any = localStorage.getItem("onboarding");
-    onboardingStatus = JSON.parse(onboardingStatus);
-
-    setJoyrideStatus(onboardingStatus);
-  }, []);
-
-  useAOS({ once: true });
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
-      {!joyrideStatus && <Onboarding step={steps} />}
+      <Box textAlign="center" pt="12vh">
+        <Heading>Aplikasi POS Geprek</Heading>
+        <Flex
+          flexDir="column"
+          width="80%"
+          maxW="450px"
+          mt="40px"
+          mx="auto"
+          rowGap="15px"
+        >
+          <Button colorScheme="teal">
+            <Link to="/sales">Penjualan</Link>
+          </Button>
+          <Button colorScheme="teal">
+            <Link to="/stock">Pembelian</Link>
+          </Button>
+        </Flex>
 
-      <Navbar />
-      <Header marginTop="120px" />
-      <Timeline />
-      {/* <Desc1 /> */}
-      <Desc2 />
-      <JoinUs />
-      <UmkmList />
-      <Sponsorship />
-      {/* <Review /> */}
-      <FaQ />
-      <Footer />
+        <Flex justifyContent="center" mt="50vh">
+          <Button variant="solid" colorScheme="gray" onClick={onOpen}>
+            Tech Stack
+          </Button>
+        </Flex>
+
+        <Modal isOpen={isOpen} onClose={onClose}>
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader textAlign="center">Tech Stack</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>
+              <List
+                display="flex"
+                flexDir="column"
+                gap="12px"
+                textAlign="center"
+              >
+                <ListItem
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  gap="12px"
+                >
+                  Reactjs{" "}
+                  <Image
+                    width="50px"
+                    src="https://www.logo.wine/a/logo/React_(web_framework)/React_(web_framework)-Logo.wine.svg"
+                  />
+                </ListItem>
+                <ListItem
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  gap="12px"
+                >
+                  Go{" "}
+                  <Image
+                    width="50px"
+                    src="https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Blue.png"
+                  />
+                </ListItem>
+                <ListItem
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  gap="20px"
+                >
+                  GraphQL{" "}
+                  <Image
+                    width="30px"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-sEofibUmrpTqeczv9TCUqmVGhCDUIfkSJN5DeIY&s"
+                  />
+                </ListItem>
+                <ListItem
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  gap="20px"
+                >
+                  Vite <Image width="30px" src="/vite.svg" />
+                </ListItem>
+                <ListItem
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  gap="20px"
+                >
+                  Chakra UI{" "}
+                  <Image
+                    width="50px"
+                    src="https://www.happylifecreators.com/wp/wp-content/uploads/2022/06/chakra-ui_title2-768x431.png"
+                  />
+                </ListItem>
+              </List>
+            </ModalBody>
+
+            <ModalFooter>
+              <Button colorScheme="blue" mr={3} onClick={onClose}>
+                Close
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+      </Box>
     </>
   );
 }
